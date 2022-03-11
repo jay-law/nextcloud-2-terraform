@@ -31,7 +31,7 @@ provider "aws" {
   region  = "us-east-1"
 }
 
-# Create AMI
+# Create EC2 instance.  Attach security groups (defined in security_groups.tf) and key
 resource "aws_instance" "app_server" {
   ami             = data.aws_ami.ubuntu.id
   instance_type   = "t2.micro"
