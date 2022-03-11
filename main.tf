@@ -38,6 +38,6 @@ resource "aws_instance" "app_server" {
   security_groups = ["sg_nextcloud"]
 
   # Key must already exist in AWS
-  key_name = "nextcloud-1"
+  key_name = "nextcloud-2"
 }
 
