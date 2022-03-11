@@ -3,12 +3,20 @@
 This tutorial is designed to walk users through installing Nextcloud in AWS (Amazon Web Services) using Terraform and Ansible.  It's more of a working example opposed to an in-depth tutorial.
 
 In the first part of the tutorial, Terraform will be used to:
-- Create an EC2 instance.  Used to host Nextcloud.
-- Create security groups and assign them to the EC2 instance.  Provides access to Nextcloud.
-- Create an elastic IP address and assign it to the EC2 instance.  Provides flexability when redeploying Nextcloud.
+- Create an EC2 instance
+- Create security groups and assign them to the EC2 instance
+- Create an elastic IP address and assign it to the EC2 instance
+- Attach pem file to EC2 instance
 
 In the second part of the tutorial, Ansible will be used to:
-- [todo]
+- Install and configure MySQL (database)
+    - `roles/common/tasks/configure_database.yml`
+- Install and configure Apache (web server)
+    - `roles/common/tasks/configure_web.yml`
+- Install and configure Nextcloud (application)
+    - `roles/common/tasks/configure_nextcloud.yml` 
+- Install a Nextcloud app
+    - `roles/apps/tasks/main.yml`
 
 Tested with the following:
 - Local machine
